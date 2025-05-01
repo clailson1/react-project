@@ -4,6 +4,8 @@ import Contact from "../pages/Contact";
 import Home from "../pages/Home";
 import PageLayout from "../layouts/PageLayout";
 import NotFound from "../pages/NotFound";
+import Product from "../pages/Product";
+import Products from "../pages/Products";
 // import { lazy } from "react";
 
 // Lazy loading com atraso para testar o fallback
@@ -32,6 +34,8 @@ const Paths = () => {
                         <Route path="/home" element={<Home />}/>
                         <Route path="/about" element={<About />}/>
                         <Route path="/contact" element={<Contact />}/>
+                        <Route path="/products" element={<Products />}/>
+                        <Route path="/product/:id/:name" element={<Product />}/>
                         <Route path="*" element={<NotFound />}/>
                     </Route>
                 </Routes>

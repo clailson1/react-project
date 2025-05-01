@@ -8,6 +8,7 @@ const Home = () => {
                 <ul>
                     <li><NavLink to={"/contact"}>Contact</NavLink></li>
                     <li><NavLink to={"/about"}>About</NavLink></li>
+                    <li><NavLink to={"/products"}>List of Products</NavLink></li>
                 </ul>
             </nav>
         </>
