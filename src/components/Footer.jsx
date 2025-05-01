@@ -1,7 +1,7 @@
 const Footer = () => {
     return (  
         <h6>
-            Website footer
+            © 2025 | Clailson
         </h6>
     );
 }

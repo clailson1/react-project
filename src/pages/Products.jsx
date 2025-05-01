@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 const Products = () => {
     return (  
         <>      
-            <NavLink to={"/home"}>Back to Home</NavLink>
             <h2>List of Products</h2>
             <ul>
                 <li><NavLink to={"/product/1/Strawberry"}>Strawberry</NavLink></li>

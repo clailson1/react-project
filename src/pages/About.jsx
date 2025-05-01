@@ -1,5 +1,6 @@
-import { NavLink } from "react-router-dom";
 // import { useEffect, useState } from "react";
+
+import { NavLink } from "react-router-dom";
 
 const About = () => {
 
@@ -19,6 +20,7 @@ const About = () => {
     return (  
         <>
             <h3>About Page</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, dolores totam ea odio voluptatem nulla quisquam minus itaque reiciendis molestias nemo ipsum, veniam, esse modi excepturi error iusto id deleniti! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus a dolorum, animi modi consectetur, minus corrupti porro voluptates error officia quos enim ut consequuntur cum autem aspernatur qui dolorem ea.</p>
             <nav>
                 <ul>
                     <li><NavLink to={"/home"}>Home</NavLink></li>
