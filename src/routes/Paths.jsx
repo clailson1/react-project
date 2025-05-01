@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import About from "../pages/About";
-import Contact from "../pages/Contact";
-import Home from "../pages/Home";
+// import About from "../pages/About";
+// import Contact from "../pages/Contact";
+// import Home from "../pages/Home";
 import PageLayout from "../layouts/PageLayout";
 import NotFound from "../pages/NotFound";
 import Product from "../pages/Product";
 import Products from "../pages/Products";
-// import { lazy } from "react";
+import { lazy } from "react";
 
 // Lazy loading com atraso para testar o fallback
 // const Home = lazy(async () => {
@@ -23,6 +23,12 @@ import Products from "../pages/Products";
 //     await new Promise(resolve => setTimeout(resolve, 1000));
 //     return import("../pages/Contact");
 // });
+
+// Lazy com imports
+const Home = lazy(() => import("../pages/Home"));
+const About = lazy(() => import("../pages/About"));
+const Contact = lazy(() => import("../pages/Contact"));
+
 
 const Paths = () => {
     return (  
