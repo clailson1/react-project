@@ -6,13 +6,15 @@ import Loading from "../fallback/Loading";
 
 const PageLayout = () => {
     return (  
-        <>
+        <div className="flex flex-column min-h-screen">
             <Header />
             <Suspense fallback={<Loading />}>
-                <Outlet />
+                <main className="flex-grow-1">
+                    <Outlet />
+                </main>
             </Suspense>
             <Footer />
-        </>
+        </div>
     );
 }
  
