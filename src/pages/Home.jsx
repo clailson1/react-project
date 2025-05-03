@@ -1,18 +1,51 @@
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { ListBox } from 'primereact/listbox';
+import { Divider } from 'primereact/divider';
+import { Card } from 'primereact/card';
+import { useState } from "react";
 
 const Home = () => {
-    return (  
-        <>
-            <h2>Website Home</h2>
-            <nav>
-                <ul>
-                    <li><NavLink to={"/products"}>List of Products</NavLink></li>
-                    <li><NavLink to={"/contact"}>Contact</NavLink></li>
-                    <li><NavLink to={"/about"}>About</NavLink></li>
-                </ul>
-            </nav>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sunt corrupti temporibus culpa commodi nihil quam atque. Consectetur itaque natus esse tenetur, quae nulla molestiae debitis corporis id, ipsa quos.</p>
-        </>
+    const navigate = useNavigate();
+    const [selectedPage, setSelectedPage] = useState(null);
+
+    const pages = [
+        { label: 'List of Products', value: '/products' },
+        { label: 'Contact', value: '/contact' },
+        { label: 'About', value: '/about' }
+    ];
+
+    const handleNavigation = (e) => {
+        setSelectedPage(e.value);
+        navigate(e.value); // redireciona para a rota
+    };
+
+    return ( 
+        <div>
+            <h2 className="flex justify-content-center m-5">Website Home</h2>
+            <div className="card flex justify-content-center gap-2 px-5">  
+                <ListBox 
+                    value={selectedPage} 
+                    options={pages} 
+                    onChange={handleNavigation} 
+                    optionLabel="label" 
+                    className="w-full md:w-14rem" 
+                />
+
+                <Divider layout="vertical" />
+
+                <Card title="Website Home Content">
+                    <p className="py-1">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sunt corrupti temporibus culpa commodi nihil quam atque. Consectetur itaque natus esse tenetur, quae nulla molestiae debitis corporis id, ipsa quos.
+                    </p>
+                    <p className="py-1">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sunt corrupti temporibus culpa commodi nihil quam atque. Consectetur itaque natus esse tenetur, quae nulla molestiae debitis corporis id, ipsa quos.
+                    </p>
+                    <p className="py-1">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sunt corrupti temporibus culpa commodi nihil quam atque. Consectetur itaque natus esse tenetur, quae nulla molestiae debitis corporis id, ipsa quos.
+                    </p>
+                </Card>
+            </div>
+        </div> 
     );
 }
  
