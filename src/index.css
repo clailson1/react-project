@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
     --text-color:#495057;
     --text-color-secondary:#6c757d;
     --border-radius:6px;
@@ -156,4 +156,4 @@
     --gray-800: #424242;
     --gray-900: #212121;
     color-scheme: light;
-} 
+}  */
