@@ -21,7 +21,7 @@ const Home = () => {
 
     return ( 
         <div>
-            <h2 className="flex justify-content-center m-5">Website Home</h2>
+            <h2 className="!text-yellow-300 !bg-blue-500 flex justify-content-center m-5">Website Home</h2>
             <div className="card flex justify-content-center gap-2 px-5">  
                 <ListBox 
                     value={selectedPage} 
@@ -33,7 +33,7 @@ const Home = () => {
 
                 <Divider layout="vertical" />
 
-                <Card title="Website Home Content">
+                <Card className="!text-yellow-300 "title="Website Home Content">
                     <p className="py-1">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sunt corrupti temporibus culpa commodi nihil quam atque. Consectetur itaque natus esse tenetur, quae nulla molestiae debitis corporis id, ipsa quos.
                     </p>

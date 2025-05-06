@@ -23,7 +23,7 @@ const Header = () => {
         }
     ];
 
-    const start = <h2 style={{ marginLeft: '1rem' }}>Website Header</h2>;
+    const start = <h2 className="!bg-green-400 !text-red-500" style={{ marginLeft: '1rem' }}>Website Header</h2>;
 
     return (
         <StyledMenubar model={items} start={start} />
