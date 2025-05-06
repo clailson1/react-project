@@ -21,7 +21,9 @@ const Home = () => {
 
     return ( 
         <div>
-            <h2 className="flex justify-content-center m-5">Website Home</h2>
+            <div className="bg-red-500 text-white p-4">TESTE TAILWIND</div>
+
+            <h2 className="!text-green-800 flex justify-content-center m-5">Website Home</h2>
             <div className="card flex justify-content-center gap-2 px-5">  
                 <ListBox 
                     value={selectedPage} 
